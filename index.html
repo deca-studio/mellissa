@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#fbf4e7" />
+  <meta name="description" content="Convite de aniversário da Melissa — 3 anos." />
+  <meta property="og:title" content="Melissa • 3 anos" />
+  <meta property="og:description" content="Você está convidado para comemorar os 3 anos da Melissa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/preview.svg" />
+  <title>Melissa • 3 anos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="invite-page">
+  <main class="invite-layout">
+    <section class="invite-card" aria-labelledby="invite-title">
+      <p class="sr-only" id="invite-title">Convite de aniversário da Melissa, 3 anos</p>
+      <div class="invite-art-frame">
+        <img src="assets/convite.svg" alt="Melissa, 3 anos — convite tropical com oceano, flores e uma pequena princesa da ilha" class="invite-art" />
+      </div>
+
+      <div class="action-panel" aria-label="Detalhes e ações da festa">
+        <button class="action-button" type="button" data-action="location">
+          <span class="action-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 21s6.5-5 6.5-12a6.5 6.5 0 1 0-13 0C5.5 16 12 21 12 21Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+          </span>
+          <span><strong>Localização</strong><small>Google Maps ou Waze</small></span>
+        </button>
+
+        <button class="action-button" type="button" data-action="calendar">
+          <span class="action-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h3M13 14h3M8 17h3"/></svg>
+          </span>
+          <span><strong>Horário</strong><small>Adicionar à agenda</small></span>
+        </button>
+
+        <a class="action-button" href="confirmacao.html">
+          <span class="action-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 7 9.5 17.5 4 12"/></svg>
+          </span>
+          <span><strong>Confirmação</strong><small>Confirmar presença</small></span>
+        </a>
+      </div>
+      <p class="tap-note">Toque nos ícones para abrir os detalhes da festa.</p>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="choiceModal" hidden>
+    <section class="choice-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Fechar">×</button>
+      <p class="modal-kicker">Melissa • 3 anos</p>
+      <h2 id="modalTitle">Escolha uma opção</h2>
+      <p id="modalMessage" class="modal-message"></p>
+      <div id="modalOptions" class="modal-options"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

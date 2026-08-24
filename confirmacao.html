@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#fbf4e7" />
+  <meta name="description" content="Confirmação de presença — aniversário de 3 anos da Melissa." />
+  <title>Confirme sua presença • Melissa 3 anos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="rsvp-page">
+  <main class="rsvp-layout">
+    <section class="rsvp-card">
+      <aside class="rsvp-visual">
+        <div class="visual-overlay"></div>
+        <div class="visual-copy">
+          <p>Um dia de mar, magia e carinho</p>
+          <h2>Melissa</h2>
+          <strong>3 anos</strong>
+        </div>
+      </aside>
+
+      <section class="rsvp-panel" aria-labelledby="rsvp-title">
+        <a href="index.html" class="back-link">← Voltar ao convite</a>
+        <div class="shell-mark" aria-hidden="true">✦</div>
+        <p class="eyebrow">Melissa • 3 anos</p>
+        <h1 id="rsvp-title">Confirme sua presença</h1>
+        <p class="lead">Preencha seus dados para ajudar na organização desse dia especial.</p>
+
+        <form id="rsvpForm" class="rsvp-form" novalidate>
+          <div class="form-grid">
+            <div class="field field-full">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Digite seu nome" required />
+              <span class="field-error" data-error-for="nome"></span>
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="seu@email.com" required />
+              <span class="field-error" data-error-for="email"></span>
+            </div>
+            <div class="field">
+              <label for="telefone">Número de telefone</label>
+              <input id="telefone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(DDD) D DDDD-DDDD" maxlength="16" required />
+              <span class="field-hint">Ex.: (34) 9 9999-9999</span>
+              <span class="field-error" data-error-for="telefone"></span>
+            </div>
+          </div>
+
+          <fieldset class="companion-toggle">
+            <legend>Haverá acompanhante?</legend>
+            <div class="segmented">
+              <label><input type="radio" name="tem_acompanhante" value="Não" checked><span>Não</span></label>
+              <label><input type="radio" name="tem_acompanhante" value="Sim"><span>Sim</span></label>
+            </div>
+          </fieldset>
+
+          <div id="companionFields" class="companion-fields" hidden>
+            <div class="field">
+              <label for="acompanhante">Nome do acompanhante</label>
+              <input id="acompanhante" name="nome_acompanhante" type="text" placeholder="Digite o nome do acompanhante" />
+              <span class="field-error" data-error-for="acompanhante"></span>
+            </div>
+            <div class="field">
+              <label for="tipoAcompanhante">Acompanhante</label>
+              <select id="tipoAcompanhante" name="tipo_acompanhante">
+                <option value="">Selecione uma opção</option>
+                <option value="Adulto (>= 18 anos)">Adulto (&gt;= 18 anos)</option>
+                <option value="Criança (< 18 anos)">Criança (&lt; 18 anos)</option>
+              </select>
+              <span class="field-error" data-error-for="tipoAcompanhante"></span>
+            </div>
+          </div>
+
+          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label class="privacy-check">
+            <input type="checkbox" id="consent" required />
+            <span>Autorizo o uso destes dados exclusivamente para a organização e confirmação desta festa.</span>
+          </label>
+          <span class="field-error consent-error" data-error-for="consent"></span>
+
+          <button class="submit-button" type="submit">
+            <span>Confirmar presença</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+          </button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+
+        <p class="email-note">As confirmações serão encaminhadas para <strong>gener4ligris@gmail.com</strong>.</p>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
